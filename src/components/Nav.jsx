@@ -1,6 +1,6 @@
 // import headerLogo from "../assets/images";
 import headerLogo from "../assets/images/header-logo.svg";
-import hamburger from "../assets/icons/hamburger.svg";
+import Hamburger from "../assets/icons/hamburger.svg";
 import { navLinks } from "../constants";
 const Nav = () => {
   return (
@@ -9,7 +9,7 @@ const Nav = () => {
         <a href="/">
           <img src={headerLogo} alt="logo" width={130} height={29} />
         </a>
-        <ul className="flex-1 flex justify-center items-center gap-16 max-lag:hidden">
+        <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
           {navLinks.map((item) => (
             <li key={item.label}>
               <a
@@ -21,6 +21,9 @@ const Nav = () => {
             </li>
           ))}
         </ul>
+        <div className="hidden max-lg:block">
+          <img src={Hamburger} width={25} height={25} alt="Hamburger" />
+        </div>
       </nav>
     </header>
   );
